@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="../CoursesForm/CoursesForm.csproj" Id="5360f203-f117-48b6-ac20-cd56caba8627" />
+  <Project Path="../DepartmentsForm/DepartmentsForm.csproj" Id="1e80dda6-09e6-4ca5-b59e-1bcd7a188613" />
+  <Project Path="../InstructorsForm/InstructorsForm.csproj" Id="85057b9f-e15c-412b-8777-5ebe40da97a1" />
+  <Project Path="../MainForm/MainForm.csproj" Id="ffd69a36-0d85-461c-93d9-931c927d8c09" />
+  <Project Path="../StudentEnrollmentsForm/StudentEnrollmentsForm.csproj" Id="2876b2e0-fcf9-408e-afa8-55a9ada09567" />
+  <Project Path="../StudentsForm/StudentsForm.csproj" Id="f6dc5ff3-a4a6-4309-9840-4b36d53dfecd" />
+  <Project Path="BLL/BLL.csproj" Id="00067db9-0ea5-4b6d-af93-8f6b1a1e4f2c" />
+  <Project Path="DAL/DAL.csproj" Id="fa582f4d-d33d-475b-bdea-4e53ed46c4c3" />
+  <Project Path="StudentManagementApp(HW).csproj" Id="fd55105c-16ad-4f3a-b767-3b94b1e0154d" />
+</Solution>

@@ -1,0 +1,15 @@
+@model ASPNETWebAppMVCStudentApp.Models.Enrollment
+@{ ViewBag.Title = "Details"; }
+<h2>Details</h2>
+<dl class="dl-horizontal">
+    <dt>Course</dt>
+    <dd>@Html.DisplayFor(m => Model.Course.Title)</dd>
+    <dt>Student</dt>
+    <dd>@Html.DisplayFor(m => Model.Student.FullName)</dd>
+    <dt>Grade</dt>
+    <dd>@Html.DisplayFor(m => Model.Grade)</dd>
+</dl>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EnrollmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

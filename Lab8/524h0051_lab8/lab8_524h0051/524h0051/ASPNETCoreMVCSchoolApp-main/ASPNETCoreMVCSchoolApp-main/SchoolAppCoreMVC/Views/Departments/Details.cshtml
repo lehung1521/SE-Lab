@@ -1,0 +1,22 @@
+@model Department
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<h4>Department</h4>
+<hr />
+<dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Model.DepartmentID</dd>
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.DepartmentName</dd>
+        <dt class="col-sm-3">Budget</dt>
+        <dd class="col-sm-9">@Model.Budget.ToString("N2")</dd>
+        <dt class="col-sm-3">Start Date</dt>
+        <dd class="col-sm-9">@Model.StartDate.ToString("yyyy-MM-dd")</dd>
+</dl>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DepartmentID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

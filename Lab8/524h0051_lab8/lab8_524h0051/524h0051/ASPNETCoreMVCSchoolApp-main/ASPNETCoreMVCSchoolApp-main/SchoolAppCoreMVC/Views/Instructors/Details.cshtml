@@ -1,0 +1,22 @@
+@model Instructor
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<h4>Instructor</h4>
+<hr />
+<dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Model.InstructorID</dd>
+        <dt class="col-sm-3">First Name</dt>
+        <dd class="col-sm-9">@Model.FirstName</dd>
+        <dt class="col-sm-3">Last Name</dt>
+        <dd class="col-sm-9">@Model.LastName</dd>
+        <dt class="col-sm-3">Hire Date</dt>
+        <dd class="col-sm-9">@Model.HireDate.ToString("yyyy-MM-dd")</dd>
+</dl>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.InstructorID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Enrollment Report";
+}
+
+<h1>Enrollment Report (.rdlc)</h1>
+
+<form method="get" asp-action="Index" class="row g-2 align-items-end mb-3">
+    <div class="col-auto">
+        <label class="form-label">Department</label>
+        <select name="departmentId" class="form-select" asp-items="ViewBag.Departments">
+            <option value="">-- All departments --</option>
+        </select>
+    </div>
+    <input type="hidden" name="show" value="true" />
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">View report</button>
+    </div>
+    <div class="col-auto">
+        <a class="btn btn-success" asp-action="Excel" asp-route-departmentId="@ViewBag.DepartmentId">Export Excel</a>
+        <a class="btn btn-secondary" asp-action="Word" asp-route-departmentId="@ViewBag.DepartmentId">Export Word</a>
+    </div>
+</form>
+
+@if (ViewBag.Show == true)
+{
+    <iframe src="@Url.Action("Pdf", "Reports", new { departmentId = ViewBag.DepartmentId })"
+            style="width:100%; height:650px; border:1px solid #ccc"></iframe>
+}

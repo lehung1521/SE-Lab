@@ -1,0 +1,9 @@
+@{ ViewData["Title"] = "Home"; }
+<h1>SE Lab 10 – Software Deployment</h1>
+<p>ASP.NET Core MVC running in Docker.</p>
+<table>
+  <tr><td>Container / host</td><td>@ViewBag.Host</td></tr>
+  <tr><td>OS</td><td>@ViewBag.Os</td></tr>
+  <tr><td>Runtime</td><td>@System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription</td></tr>
+  <tr><td>Server time (UTC)</td><td>@ViewBag.Time</td></tr>
+</table>

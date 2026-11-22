@@ -1,0 +1,22 @@
+# Variables to set in GitLab > Settings > CI/CD > Variables:
+#   CI_REGISTRY_USER, CI_REGISTRY_PASSWORD (Docker Hub user + access token), DOCKERHUB_USER
+image: docker:27
+services:
+  - docker:27-dind
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - docker build -t $DOCKERHUB_USER/myaspnetcoreapp:latest .
+    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin
+    - docker push $DOCKERHUB_USER/myaspnetcoreapp:latest
+
+deploy:
+  stage: deploy
+  script:
+    - docker pull $DOCKERHUB_USER/myaspnetcoreapp:latest
+    - docker run -d -p 8080:80 --name myaspnetcoreappcontainer $DOCKERHUB_USER/myaspnetcoreapp:latest

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BLL/BLL.csproj" Id="c4526d02-073c-4634-aff3-4ca1555a2255" />
+  <Project Path="DAL/DAL.csproj" Id="e6f7fbfd-e4dd-44ea-8606-ee7987ca9d32" />
+  <Project Path="LoginApp.csproj" Id="425356e5-afb0-406a-9564-5a43d637039e" />
+</Solution>

@@ -1,0 +1,25 @@
+@model System.Collections.Generic.IEnumerable<ASPNETWebAppMVCStudentApp.Models.Student>
+@{ ViewBag.Title = "Students"; }
+<h2>Students</h2>
+<p>@Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })</p>
+<table class="table table-striped">
+    <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Enrollment Date</th>
+        <th></th>
+    </tr>
+@foreach (var item in Model)
+{
+    <tr>
+                <td>@Html.DisplayFor(m => item.FirstName)</td>
+                <td>@Html.DisplayFor(m => item.LastName)</td>
+                <td>@Html.DisplayFor(m => item.EnrollmentDate)</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.StudentID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.StudentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.StudentID })
+        </td>
+    </tr>
+}
+</table>
